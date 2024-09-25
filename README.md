@@ -232,12 +232,13 @@ print("\n")
 
 # API 3: Feriados públicos (ejemplo de Nager.Date)
 url_3 = "https://date.nager.at/api/v2/publicholidays/2024/US"
-holidays_response = requests.get(url_3)
-holidays_data = holidays_response.json()
+dias_festivos_1 = requests.get(url_3)
+dias_festivos_2 = dias_festivos_1.json()
 print("Feriados públicos:")
-for holiday in holidays_data:
-    print_key_value_pairs(holiday)
+for dia in dias_festivos_2:
+    print_key_value_pairs(dia)
     print("\n")
+
 
 
 ```
