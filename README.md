@@ -214,7 +214,7 @@ def print_key_value_pairs(data):
     for key, value in data.items():
         print(f'{key}: {value}')
 
-# API 1: Datos meteorológicos (ejemplo de OpenWeatherMap)
+# API 1: Datos meteorológicos
 url_1 = "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&hourly=temperature_2m"
 clima = requests.get(url_1)
 clima_2 = clima.json()
@@ -230,7 +230,7 @@ print("Imagen de perro:")
 print_key_value_pairs(perros_2)
 print("\n")
 
-# API 3: Feriados públicos (ejemplo de Nager.Date)
+# API 3: Dias Festivos
 url_3 = "https://date.nager.at/api/v2/publicholidays/2024/US"
 dias_festivos_1 = requests.get(url_3)
 dias_festivos_2 = dias_festivos_1.json()
